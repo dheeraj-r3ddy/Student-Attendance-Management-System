@@ -26,7 +26,7 @@ public class Student {
     @Column(nullable = false)
     private String department;
 
-    @Column(nullable = false)
+    @Column(name = "academic_year", nullable = false)
     private String year;
 
     @Column(nullable = false)

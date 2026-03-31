@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS students (
     id BIGSERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     department VARCHAR(255) NOT NULL,
-    year VARCHAR(50) NOT NULL,
+    academic_year VARCHAR(50) NOT NULL,
     section VARCHAR(10) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -50,7 +50,7 @@ VALUES ('faculty', '$2a$10$Y6xGXNZ7QnLwHrYaKq4x0.Rqw7a8ZwZn9v6L4naRK2dYyK6yL0Mxn
 ON CONFLICT (username) DO NOTHING;
 
 -- Insert sample students
-INSERT INTO students (name, department, year, section) VALUES
+INSERT INTO students (name, department, academic_year, section) VALUES
 ('John Smith', 'Computer Science', '3rd Year', 'A'),
 ('Emma Wilson', 'Computer Science', '3rd Year', 'A'),
 ('Michael Brown', 'Computer Science', '3rd Year', 'A'),
